@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, TestAndroidBrowserActivity!</string>
+    <string name="app_name">TestAndroidBrowser</string>
+    <string name="Go">直达</string>
+    <string name="Home">主页</string>
+    <string name="back">后退</string>
+    <string name="forward">前进</string>
+    <string name="refresh">刷新</string>
+    <string name="BrowserName">3G浏览器</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/linearLayoutTopToolBar">
+    <Button android:layout_width="wrap_content" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/Home" android:id="@+id/buttonHome"></Button>
+    <EditText android:layout_height="wrap_content" android:id="@+id/editTextLocation" android:layout_width="186dp" android:layout_weight="81.72">
+        <requestFocus></requestFocus>
+    </EditText>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/buttonGo" android:text="@string/Go" android:onClick="LoadUrl"></Button>
+</LinearLayout>
+<WebView android:layout_width="match_parent" android:id="@+id/webViewMain" android:layout_height="372dp" android:layout_weight="1.33" android:layout_gravity="fill"></WebView>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:id="@+id/linearLayoutBottomToolBar">
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/back" android:id="@+id/buttonBackward"></Button>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/forward" android:id="@+id/buttonForward"></Button>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/refresh" android:id="@+id/buttonRefresh"></Button>
+    <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="match_parent" android:text="@string/BrowserName" android:layout_gravity="center" android:id="@+id/textViewBrowserName"></TextView>
+</LinearLayout>
+</LinearLayout>
