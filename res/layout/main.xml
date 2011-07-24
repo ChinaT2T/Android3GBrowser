@@ -11,11 +11,11 @@
     </EditText>
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/buttonGo" android:text="@string/Go" android:onClick="LoadUrl"></Button>
 </LinearLayout>
-<WebView android:layout_width="match_parent" android:id="@+id/webViewMain" android:layout_height="372dp" android:layout_weight="1.33" android:layout_gravity="fill"></WebView>
-<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:id="@+id/linearLayoutBottomToolBar">
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/back" android:id="@+id/buttonBackward"></Button>
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/forward" android:id="@+id/buttonForward"></Button>
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/refresh" android:id="@+id/buttonRefresh"></Button>
+<WebView android:layout_width="match_parent" android:id="@+id/webViewMain" android:layout_weight="1.33" android:layout_gravity="fill" android:layout_height="match_parent"></WebView>
+<LinearLayout android:layout_width="match_parent" android:layout_gravity="bottom" android:id="@+id/linearLayoutBottomToolBar" android:layout_height="wrap_content">
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/back" android:id="@+id/buttonBackward" android:onClick="backward"></Button>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/forward" android:id="@+id/buttonForward" android:onClick="forward"></Button>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/refresh" android:id="@+id/buttonRefresh" android:onClick="reload"></Button>
     <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="match_parent" android:text="@string/BrowserName" android:layout_gravity="center" android:id="@+id/textViewBrowserName"></TextView>
 </LinearLayout>
 </LinearLayout>

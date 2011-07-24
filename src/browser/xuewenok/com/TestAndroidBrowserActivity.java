@@ -58,4 +58,16 @@ public class TestAndroidBrowserActivity extends Activity{
     		imm.hideSoftInputFromWindow( this.getCurrentFocus().getWindowToken(), 0);
     	}
       }
+    // Backward
+    public void backward(View v) {
+    	webView.goBack();
+    }
+    // Forward
+    public void forward(View v) {
+    	webView.goForward();
+    }
+    // Refresh
+    public void reload(View v) {
+    	webView.reload();
+    }
 }
