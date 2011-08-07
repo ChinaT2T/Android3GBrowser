@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:weightSum="1" android:layout_gravity="fill" android:background="#cccccc">
-    <LinearLayout android:layout_width="match_parent" android:orientation="vertical" android:id="@+id/linearLayoutWrapper" android:layout_gravity="fill" android:layout_weight="0.89" android:layout_height="match_parent">
-        <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayoutTopToolBar" android:layout_height="wrap_content">
-            <Button android:layout_weight="1" android:layout_width="wrap_content" android:id="@+id/buttonHome" android:text="@string/Home" android:layout_height="wrap_content"></Button>
-            <EditText android:layout_weight="81.72" android:layout_width="186dp" android:layout_height="wrap_content" android:id="@+id/editTextLocation"></EditText>
-            <Button android:layout_weight="1" android:layout_width="wrap_content" android:onClick="LoadUrl" android:id="@+id/buttonGo" android:text="@string/Go" android:layout_height="wrap_content"></Button>
+    android:weightSum="1" android:layout_gravity="fill" android:background="#336699" android:layout_width="fill_parent">
+    <LinearLayout android:layout_width="fill_parent" android:orientation="vertical" android:id="@+id/linearLayoutWrapper" android:layout_gravity="fill" android:layout_weight="0.89" android:layout_height="fill_parent">
+        <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayoutTopToolBar" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:baselineAligned="true" android:layout_weight="0">
+            <Button android:id="@+id/buttonHome" android:layout_gravity="center" android:gravity="clip_horizontal|fill" android:text="@string/empty" android:onClick="home" android:layout_height="wrap_content" android:background="@drawable/actio8s__o_home_ico8_48" android:layout_width="wrap_content"></Button>
+            <EditText android:id="@+id/editTextLocation" android:gravity="fill" android:layout_width="fill_parent" android:layout_weight="1" android:layout_gravity="center" android:inputType="textUri" android:layout_height="wrap_content">
+                <requestFocus></requestFocus>
+            </EditText>
+            <Button android:onClick="LoadUrl" android:id="@+id/buttonGo" android:text="@string/empty" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_weight="0" android:background="@drawable/actio8s_media_4layback_start_ico8_48"></Button>
         </LinearLayout>
-        <WebView android:layout_weight="1.33" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="fill" android:id="@+id/webViewMain"></WebView>
-        <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayoutBottomToolBar" android:layout_height="wrap_content" android:layout_gravity="bottom" android:baselineAligned="true">
-            <Button android:layout_width="wrap_content" android:onClick="backward" android:id="@+id/buttonBackward" android:text="@string/back" android:layout_height="wrap_content" android:layout_gravity="bottom"></Button>
-            <Button android:layout_width="wrap_content" android:onClick="forward" android:id="@+id/buttonForward" android:text="@string/forward" android:layout_height="wrap_content" android:layout_gravity="bottom"></Button>
-            <Button android:layout_width="wrap_content" android:onClick="reload" android:id="@+id/buttonRefresh" android:text="@string/refresh" android:layout_height="wrap_content" android:layout_gravity="bottom"></Button>
-            <TextView android:layout_width="match_parent" android:text="@string/BrowserName" android:layout_gravity="center" android:id="@+id/textViewBrowserName" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content"></TextView>
+        <WebView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_gravity="fill" android:id="@+id/webViewMain" android:layout_weight="1"></WebView>
+        <ProgressBar android:layout_weight="0" style="?android:attr/progressBarStyleHorizontal" android:layout_width="fill_parent" android:id="@+id/progressBar" android:layout_height="wrap_content"></ProgressBar>
+        <LinearLayout android:id="@+id/linearLayoutBottomToolBar" android:layout_gravity="bottom" android:baselineAligned="true" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="0" android:orientation="horizontal">
+            <Button android:onClick="backward" android:id="@+id/buttonBackward" android:text="@string/empty" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_weight="0" android:background="@drawable/actio8s_media_seek_backward_ico8_48"></Button>
+            <Button android:onClick="forward" android:id="@+id/buttonForward" android:text="@string/empty" android:layout_gravity="center" android:layout_weight="0" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@drawable/actio8s_media_seek_forward_ico8_48"></Button>
+            <Button android:text="@string/empty" android:id="@+id/stop" android:layout_gravity="center" android:layout_weight="0" android:onClick="stop" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@drawable/actio8s_media_4layback_sto4_ico8_48"></Button>
+            <Button android:onClick="reload" android:id="@+id/buttonRefresh" android:text="@string/empty" android:layout_gravity="center" android:layout_weight="0" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@drawable/actio8s_view_refresh_ico8_48"></Button>
+            <TextView android:text="@string/BrowserName" android:id="@+id/textViewBrowserName" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_gravity="center_vertical" android:layout_weight=".1" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
